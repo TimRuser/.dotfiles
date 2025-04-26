@@ -104,4 +104,3 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-export DISPLAY=/private/tmp/com.apple.launchd.HBHVApnc2W/org.xquartz:0
