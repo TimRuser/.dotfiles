@@ -1,4 +1,6 @@
 # My Dotfiles (and .vim folder)
-First install oh-my-zsh.
 
-NOTE: The files inside the color directory are from http://github.com/flazz/vim-colorschemes
+Optionally, make an alias:
+`alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
+
+NOTE: The files inside the ~/.vim/color directory will be cloned from http://github.com/flazz/vim-colorschemes
