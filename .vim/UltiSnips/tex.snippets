@@ -118,13 +118,13 @@ endsnippet
 snippet dm "Math" wA
 \[
 ${1:${VISUAL}}
-.\] $0
+\] $0
 endsnippet
 
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 
@@ -641,6 +641,14 @@ snippet DD "D" iA
 \mathbb{D}
 endsnippet
 
+snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
+\vec{`!p snip.rv=match.group(1)`}
+endsnippet
+  
+context "math()"
+snippet tag "\tag*{}" i
+\tag*{\(\vert ${0:${VISUAL}}\)}
+endsnippet
 
 
 snippet note "LaTeX Notes Template with Title, Name, Date" b
@@ -650,6 +658,10 @@ snippet note "LaTeX Notes Template with Title, Name, Date" b
 \usepackage{amsmath, amssymb}
 \usepackage{fancyhdr}
 \usepackage{parskip}
+\usepackage{textcomp, gensymb}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 
 \title{${1:Title}}
 \author{Tim Ruser}
@@ -673,13 +685,14 @@ snippet note "LaTeX Notes Template with Title, Name, Date" b
 \fancyhead[R]{\nouppercase{\leftmark \rightmark}}
 \setlength{\headsep}{28pt}
 \setlength{\headheight}{24pt}
+\addtolength{\jot}{1em}
 
 \begin{document}
 \maketitle
 
 \section{${2:First section}}
 
-${0:Here goes your content...}
+${0:Content}
 
 \end{document}
 endsnippet
